@@ -6,6 +6,9 @@ echo "🚀 Starting dependency installation..."
 # Ensure we're in the right directory
 cd /home/ec2-user/werewolf-app
 
+# 🔧 Fix directory ownership for ec2-user
+sudo chown -R ec2-user:ec2-user /home/ec2-user/werewolf-app
+
 # Install Node.js if missing
 if ! command -v node &> /dev/null; then
   echo "Node.js not found. Installing Node.js 18..."
