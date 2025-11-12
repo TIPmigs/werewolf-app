@@ -171,11 +171,13 @@ export default function RoleForm({ role, onSuccess, onCancel }) {
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
               {imagePreview ? (
                 <div className="space-y-2">
-                  <img
-                    src={imagePreview}
-                    alt="Preview"
-                    className="w-full h-64 object-cover rounded"
-                  />
+                  <div className="relative w-full mx-auto max-w-sm" style={{ paddingBottom: '135.7%' }}>
+                    <img
+                      src={imagePreview}
+                      alt="Preview"
+                      className="absolute inset-0 w-full h-full object-cover rounded shadow-lg"
+                    />
+                  </div>
                   <button
                     type="button"
                     onClick={() => {
